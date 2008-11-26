@@ -1,0 +1,4 @@
+--New Debugger Started--
+19-5-0-55:29 Error: Error with the XML source 
+19-5-0-55:29 Error: java.lang.NullPointerException
+19-5-0-55:29 Error: org.luz.test.ExceptionHandler.main(ExceptionHandler.java:13)
