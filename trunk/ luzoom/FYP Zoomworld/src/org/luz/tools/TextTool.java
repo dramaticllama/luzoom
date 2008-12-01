@@ -1,21 +1,19 @@
 package org.luz.tools;
 
-
-import edu.umd.cs.piccolox.event.PStyledTextEventHandler;
+import org.luz.input.TextHandler;
 
 public class TextTool extends Tool {
 
-	private PStyledTextEventHandler textHandler;
+	private TextHandler textHandler;
 	
 	public TextTool(ToolBelt data) {
 		super(data);
-		textHandler = new PStyledTextEventHandler(data.getPaintPanel());
+		textHandler = new TextHandler(data);
 	}
 	public void toolActive() {
 		data.getPaintPanel().addInputEventListener(textHandler);
 	}
 	public void toolSwap() {
-		textHandler.stopEditing();
 		data.getPaintPanel().removeInputEventListener(textHandler);
 	}
 }
