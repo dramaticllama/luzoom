@@ -5,6 +5,8 @@ import java.awt.Dimension;
 import java.awt.geom.Point2D;
 
 import edu.umd.cs.piccolo.*;
+import edu.umd.cs.piccolo.event.PInputEvent;
+import edu.umd.cs.piccolo.event.PZoomEventHandler;
 
 public class LuzPanel extends PCanvas {
 	
@@ -16,6 +18,15 @@ public class LuzPanel extends PCanvas {
 		setBackground(Color.LIGHT_GRAY);
 		setPanEventHandler(null);		
 		layer = getLayer();
+		setZoomEventHandler(new PZoomEventHandler() {
+	        public void processEvent(final PInputEvent evt, final int i) {
+	                if (evt.isMouseWheelEvent()) {
+	                        final double s = 1D - 0.25 * evt.getWheelRotation();
+	                        final Point2D p = evt.getPosition();
+	                        evt.getCamera().scaleViewAboutPoint(s, p.getX(),p.getY());
+	                }
+	        }
+		});
 	}	
 	public boolean createNewNode(Point2D startRect,double d,double e,PNode parent,Color c) {
 		PNode aNode = new PNode();
