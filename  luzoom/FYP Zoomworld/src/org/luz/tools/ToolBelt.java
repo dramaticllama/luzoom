@@ -31,7 +31,7 @@ public class ToolBelt {
 		toolbox = new Tool[5];
 		toolbox[0] = new PanTool(this);
 		toolbox[1] = new SquareTool(this);	
-		toolbox[2] = new ChangeTool(this);
+		toolbox[2] = new SelectTool(this);
 		toolbox[3] = new TextTool(this);
 		toolbox[4] = new EllipseTool(this);
 	}

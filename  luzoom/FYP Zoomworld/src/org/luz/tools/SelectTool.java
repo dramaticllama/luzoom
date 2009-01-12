@@ -1,21 +1,26 @@
 package org.luz.tools;
 
-import edu.umd.cs.piccolo.event.PDragEventHandler;
+
+import org.luz.input.SelectionHandler;
+
+import edu.umd.cs.piccolox.event.PSelectionEventHandler;
 
 public class SelectTool extends Tool {
 
-	private PDragEventHandler drag;
+	PSelectionEventHandler selectionEventHandler;
 	
 	public SelectTool(ToolBelt data) {
 		super(data);
-		drag = new PDragEventHandler();
+		selectionEventHandler= new SelectionHandler(data.getPaintPanel().layer, data.getPaintPanel().layer,data);
 	}
 	public void toolActive() {
-		data.getPaintPanel().addInputEventListener(drag);
-		
+		data.getPaintPanel().addInputEventListener(selectionEventHandler);
+		data.getPaintPanel().getRoot().getDefaultInputManager().setKeyboardFocus(selectionEventHandler);
 	}
 	public void toolSwap() {
-		data.getPaintPanel().removeInputEventListener(drag);
+		selectionEventHandler.unselectAll();
+		data.getPaintPanel().removeInputEventListener(selectionEventHandler);
+		data.getPaintPanel().getRoot().getDefaultInputManager().setKeyboardFocus(null);
 	}
 
 }
