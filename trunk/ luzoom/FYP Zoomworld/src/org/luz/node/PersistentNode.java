@@ -2,6 +2,7 @@ package org.luz.node;
 
 public interface PersistentNode {
 
-	public abstract void saveNode();
+	public abstract String saveNodeStart();
+	public abstract String saveNodeEnd();
 	
 }
