@@ -8,7 +8,6 @@ import org.luz.input.InputEventHandler;
 
 import edu.umd.cs.piccolo.*;
 import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.event.PInputEventListener;
 import edu.umd.cs.piccolo.event.PZoomEventHandler;
 
 public class LuzPanel extends PCanvas {
