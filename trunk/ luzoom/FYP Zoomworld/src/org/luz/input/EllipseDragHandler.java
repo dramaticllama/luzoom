@@ -6,14 +6,14 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 
 import org.luz.node.PathNode;
-import org.luz.node.SimpleEllipseNode;
+
 import org.luz.tools.ToolBelt;
 
 import edu.umd.cs.piccolo.PLayer;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.event.PInputEventFilter;
-import edu.umd.cs.piccolo.nodes.PPath;
+
 
 public class EllipseDragHandler extends  PBasicInputEventHandler {
 	protected PathNode ellipse;	
