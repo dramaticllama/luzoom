@@ -28,11 +28,12 @@ public class ToolBelt {
 		toolbox[currentTool].toolActive();
 	}
 	private void initTools() {
-		toolbox = new Tool[5];
+		toolbox = new Tool[6];
 		toolbox[0] = new PanTool(this);
 		toolbox[1] = new SquareTool(this);	
 		toolbox[2] = new SelectTool(this);
 		toolbox[3] = new TextTool(this);
 		toolbox[4] = new EllipseTool(this);
+		toolbox[5] = new PanTool(this);
 	}
 }

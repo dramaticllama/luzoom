@@ -9,12 +9,13 @@ import org.luz.input.InputEventHandler;
 import edu.umd.cs.piccolo.*;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.event.PZoomEventHandler;
+import edu.umd.cs.piccolox.handles.PHandle;
 
 public class LuzPanel extends PCanvas {
 	
 	private static final long serialVersionUID = 1L;	
 	
-	public PLayer layer;
+	public static PLayer layer;
 	InputEventHandler defaultHandler;
 	
 	public LuzPanel() {		
@@ -29,7 +30,7 @@ public class LuzPanel extends PCanvas {
 	                if (evt.isMouseWheelEvent()) {
 	                        final double s = 1D - 0.25 * evt.getWheelRotation();
 	                        final Point2D p = evt.getPosition();
-	                        evt.getCamera().scaleViewAboutPoint(s, p.getX(),p.getY());
+	                        evt.getCamera().scaleViewAboutPoint(s, p.getX(),p.getY());	      
 	                }
 	        }
 		});

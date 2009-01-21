@@ -5,11 +5,13 @@ import java.awt.event.KeyEvent;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.luz.node.BoundsHandle;
 import org.luz.tools.ToolBelt;
 
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolox.event.PSelectionEventHandler;
+import edu.umd.cs.piccolox.handles.PBoundsHandle;
 
 
 
@@ -25,6 +27,12 @@ public class SelectionHandler extends PSelectionEventHandler {
 		this.data = data;
 	}
 
+	public void decorateSelectedNode(PNode node) {
+		BoundsHandle.addBoundsHandlesTo(node,(float)(1 / data.getPaintPanel().getCamera().getViewScale()));
+	}
+	public void undecorateSelectedNode(PNode node) {
+		BoundsHandle.removeBoundsHandlesFrom(node);
+	}
 	/**
 	 * Delete selection when delete key is pressed (if enabled)
 	 */

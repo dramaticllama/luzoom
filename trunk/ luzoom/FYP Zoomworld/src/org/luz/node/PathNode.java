@@ -1,5 +1,6 @@
 package org.luz.node;
 
+import java.awt.BasicStroke;
 import java.awt.Shape;
 import java.awt.Stroke;
 
@@ -19,12 +20,13 @@ public class PathNode extends PPath implements PersistentNode {
         }
 		@Override
 		public String saveNodeEnd() {
-			return "<PathNode x=\""+ getX() + "\",y=\"" + getY() + "\",height=\"" + getHeight() + "\"width=\"" + getWidth() + "\"scale=\"" + getScale()+ "\">";
-			
+			return "</PathNode>";		
 		}
 		@Override
 		public String saveNodeStart() {
-			return "</PathNode>";
+			
+			return "<PathNode x=\""+ getX() + "\",y=\"" + getY() + "\",height=\"" + getHeight() + "\"width=\"" + getWidth() + "\"scale=\"" + ((BasicStroke)getStroke()).getLineWidth() + "\">";
+
 		}      
 }
 
