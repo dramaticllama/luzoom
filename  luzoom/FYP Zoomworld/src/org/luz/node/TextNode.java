@@ -20,8 +20,13 @@ public class TextNode extends PText implements PersistentNode{
 	}
 	@Override
 	public String saveNodeStart() {
-		return "<TextNode text=\""+ getText() + "\",x=\""+ getX() + "\",y=\"" + getY() + "\",height=\"" + getHeight() + "\"width=\"" + getWidth() + "\"scale=\"" + scale + "\">";
-		
+		return "<TextNode>\n" +
+		"\t<Text t=\"" + getText() + "\"></Text>\n" +
+		"\t<Xval x=\""+ getX() + "\"></Xval>\n"  +
+		"\t<Yval y=\"" + getY() + "\"></Yval>\n" +
+		"\t<Height h=\"" + getHeight() + "\"></Height>\n" +
+		"\t<Width w=\"" + getWidth() + "\"></Width>\n" +
+		"\t<Scale s=\"" + scale + "\"></Scale>\n";
 	}
 	@Override
 	public String saveNodeEnd() {

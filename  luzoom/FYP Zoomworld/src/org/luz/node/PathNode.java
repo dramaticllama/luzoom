@@ -20,13 +20,17 @@ public class PathNode extends PPath implements PersistentNode {
         }
 		@Override
 		public String saveNodeEnd() {
-			return "</PathNode>";		
+			return "</PathNode>\n";		
 		}
 		@Override
 		public String saveNodeStart() {
 			
-			return "<PathNode x=\""+ getX() + "\",y=\"" + getY() + "\",height=\"" + getHeight() + "\"width=\"" + getWidth() + "\"scale=\"" + ((BasicStroke)getStroke()).getLineWidth() + "\">";
-
+			return "<PathNode>\n" +
+					"\t<Xval x=\""+ getX() + "\"></Xval>\n"  +
+					"\t<Yval y=\"" + getY() + "\"></Yval>\n" +
+					"\t<Height h=\"" + getHeight() + "\"></Height>\n" +
+					"\t<Width w=\"" + getWidth() + "\"></Width>\n" +
+					"\t<Scale s=\"" + ((BasicStroke)getStroke()).getLineWidth() + "\"></Scale>";
 		}      
 }
 
