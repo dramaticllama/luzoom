@@ -17,7 +17,7 @@ public class GroupNode extends PNode implements PersistentNode{
 
 	@Override
 	public String saveNodeStart() {
-		return "<GroupNode x=\""+ getX() + "\",y=\"" + getY() + "\",height=\"" + getHeight() + "\"width=\"" + getWidth() + "\">";
+		return "<GroupNode>";
 		
 	}
 

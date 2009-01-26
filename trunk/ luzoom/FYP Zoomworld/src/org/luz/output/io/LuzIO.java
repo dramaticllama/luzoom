@@ -26,9 +26,11 @@ public class LuzIO {
 		FileWriter outputStream = null;
 
 		outputStream = new FileWriter(selectedFile);	
+		writeStringLn("<LUZScene>", outputStream);
 		for(int i = 0;i <layer.getChildrenCount();i++){
 			saveNode(outputStream,layer.getChild(i));
 		}
+		writeStringLn("</LUZScene>", outputStream);
 		if (outputStream != null) {				
 			outputStream.close();
 		}

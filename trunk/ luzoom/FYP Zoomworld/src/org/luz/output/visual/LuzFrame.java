@@ -15,6 +15,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
+import org.luz.browser.BrowserFrame;
+import org.luz.input.Handler;
+import org.luz.input.Reader;
 import org.luz.output.io.LuzIO;
 import org.luz.tools.ToolBelt;
 
@@ -57,20 +60,21 @@ public class LuzFrame extends JFrame {
 
 	private JFileChooser fileC;
 
-	private LuzIO io;
+	private Reader xmlReader;
+	private Handler xmlHandler;
 
 	public LuzFrame() {
 		super("LUZ - Lancaster University Zoomworld");
 		bar = new JToolBar();						
 		addButtons(bar);
 
-		io = new LuzIO();
-		fileC = new JFileChooser();
-
+		fileC = new JFileChooser("C:\\Documents and Settings\\Owner\\Desktop\\Backup\\Code\\Eclipse Workspace\\FYP Zoomworld");
+	
 		panel = new LuzPanel();
 		data = new ToolBelt(panel);		
 		data.changeToolBoxState(0);
-
+		xmlHandler = new Handler();
+		xmlReader =  new Reader();
 		createMenu();
 		this.setJMenuBar(menuBar);
 
@@ -109,6 +113,13 @@ public class LuzFrame extends JFrame {
 		menuBar.add(fileMenu);
 		fileMenu.add(fileNew);
 		fileMenu.add(fileLoad);	
+		fileLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(fileC.showSaveDialog(null)== JFileChooser.APPROVE_OPTION){
+					xmlReader.startXMLParse(fileC.getSelectedFile(), xmlHandler);
+				}
+			}			
+		});
 		fileMenu.addSeparator();
 		fileMenu.add(fileSave);
 		fileSave.addActionListener(new ActionListener() {
@@ -125,6 +136,11 @@ public class LuzFrame extends JFrame {
 		fileMenu.add(fileSaveAs);
 		fileMenu.addSeparator();
 		fileMenu.add(fileTest);
+		fileTest.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BrowserFrame b = new BrowserFrame();
+			}			
+		});
 		fileMenu.addSeparator();
 		fileMenu.add(fileExit);
 
