@@ -11,7 +11,7 @@ import edu.umd.cs.piccolo.event.PZoomEventHandler;
 @SuppressWarnings("serial")
 public class LuzPanel extends PCanvas {		
 
-	public static PLayer layer;
+	public PLayer layer;
 
 	public LuzPanel() {				
 		setPreferredSize(new Dimension(400,400));

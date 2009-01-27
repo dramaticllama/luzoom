@@ -11,9 +11,6 @@ import org.luz.tools.ToolBelt;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolox.event.PSelectionEventHandler;
-import edu.umd.cs.piccolox.handles.PBoundsHandle;
-
-
 
 public class SelectionHandler extends PSelectionEventHandler {
 
@@ -58,9 +55,11 @@ public class SelectionHandler extends PSelectionEventHandler {
 						System.out.println("Print");
 						PNode node = (PNode)selectionEn.next();	
 						PNode newNode = (PNode)node.clone();
+						newNode.setBounds(newNode.getX() + (10/newNode.getScale()), newNode.getY() + (10/newNode.getScale()), newNode.getWidth(), newNode.getHeight());
 						data.getPaintPanel().layer.addChild(newNode);	
 						select(newNode);
-					}					
+					}			
+					
 				}
 			}
 		}
