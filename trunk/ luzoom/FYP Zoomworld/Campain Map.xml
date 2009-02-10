@@ -1,0 +1,195 @@
+<LUZScene>
+<PathNode>
+	<Xval x="260.5"></Xval>
+	<Yval y="116.5"></Yval>
+	<Height h="796.0"></Height>
+	<Width w="1351.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="263.5"></Xval>
+	<Yval y="120.5"></Yval>
+	<Height h="47.0"></Height>
+	<Width w="54.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="1559.5"></Xval>
+	<Yval y="120.5"></Yval>
+	<Height h="52.0"></Height>
+	<Width w="48.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="1560.5"></Xval>
+	<Yval y="850.5"></Yval>
+	<Height h="59.0"></Height>
+	<Width w="46.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="265.5"></Xval>
+	<Yval y="860.5"></Yval>
+	<Height h="48.0"></Height>
+	<Width w="77.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="730.5"></Xval>
+	<Yval y="306.5"></Yval>
+	<Height h="149.0"></Height>
+	<Width w="178.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="905.5"></Xval>
+	<Yval y="306.5"></Yval>
+	<Height h="54.0"></Height>
+	<Width w="350.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="1190.5"></Xval>
+	<Yval y="598.5"></Yval>
+	<Height h="90.0"></Height>
+	<Width w="84.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="504.5"></Xval>
+	<Yval y="636.5"></Yval>
+	<Height h="89.0"></Height>
+	<Width w="104.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="504.5"></Xval>
+	<Yval y="568.5"></Yval>
+	<Height h="70.0"></Height>
+	<Width w="57.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="503.5"></Xval>
+	<Yval y="216.5"></Yval>
+	<Height h="91.0"></Height>
+	<Width w="106.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<PathNode>
+	<Xval x="645.5"></Xval>
+	<Yval y="453.5"></Yval>
+	<Height h="196.0"></Height>
+	<Width w="357.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<TextNode>
+	<Text t="Palace"></Text>
+	<Xval x="765.0"></Xval>
+	<Yval y="394.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="36.69140625"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Comms"></Text>
+	<Xval x="531.0"></Xval>
+	<Yval y="265.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="41.33203125"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Barracks"></Text>
+	<Xval x="544.0"></Xval>
+	<Yval y="685.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="47.34375"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Armoury"></Text>
+	<Xval x="517.0"></Xval>
+	<Yval y="600.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="45.33984375"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Snipers Alley"></Text>
+	<Xval x="988.0"></Xval>
+	<Yval y="342.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="70.03125"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Muster Square"></Text>
+	<Xval x="759.0"></Xval>
+	<Yval y="554.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="78.703125"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<TextNode>
+	<Text t="Space Port"></Text>
+	<Xval x="1209.0"></Xval>
+	<Yval y="656.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="59.3671875"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<PathNode>
+	<Xval x="824.5"></Xval>
+	<Yval y="697.5"></Yval>
+	<Height h="142.0"></Height>
+	<Width w="193.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<TextNode>
+	<Text t="Hostpital"></Text>
+	<Xval x="904.0"></Xval>
+	<Yval y="765.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="46.6875"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+<PathNode>
+	<Xval x="506.5"></Xval>
+	<Yval y="307.5"></Yval>
+	<Height h="152.0"></Height>
+	<Width w="84.0"></Width>
+	<Scale s="1.0"></Scale>
+</PathNode>
+
+<TextNode>
+	<Text t="Earth Caste"></Text>
+	<Xval x="541.0"></Xval>
+	<Yval y="373.0"></Yval>
+	<Height h="15.09375"></Height>
+	<Width w="63.36328125"></Width>
+	<Scale s="1.0"></Scale>
+
+</TextNode>
+</LUZScene>

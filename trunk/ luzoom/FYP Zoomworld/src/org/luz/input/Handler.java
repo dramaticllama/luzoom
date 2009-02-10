@@ -1,65 +1,75 @@
 package org.luz.input;
+import java.awt.BasicStroke;
+import java.awt.Point;
+import java.awt.geom.Point2D;
+
+import org.luz.node.PathNode;
+import org.luz.node.TextNode;
+import org.luz.output.visual.LuzPanel;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
+
+import edu.umd.cs.piccolo.util.PBounds;
 
 
 public class Handler extends DefaultHandler {
 
-	public Handler () {
+	private LuzPanel p;
+	
+	private double x;
+	private double y;
+	private double h;
+	private double w;
+	private float s;
+	private String t;
+	
+	public Handler (LuzPanel panel) {
 		super();
+		p = panel;
 	}
 
-	public void startDocument ()  {
-		System.out.println("Start document");
-	}
-
-
-	public void endDocument () {
-		System.out.println("End document");
-	}
+	public void startDocument(){}
+	public void endDocument(){}
 
 
 	public void startElement (String uri, String name, String qName, Attributes atts) {
-		if ("".equals (uri))
-			System.out.println("Start element: " + qName);
-		else
-			System.out.println("Start element: {" + uri + "}" + name);
+		if(name.equals("Xval")) {
+			x = Double.parseDouble(atts.getValue(0));
+		}else if(name.equals("Yval")) {
+			y = Double.parseDouble(atts.getValue(0));
+		}else if(name.equals("Height")) {
+			h = Double.parseDouble(atts.getValue(0));
+		}else if(name.equals("Width")) {
+			w = Double.parseDouble(atts.getValue(0));
+		}else if(name.equals("Scale")) {
+			s = Float.parseFloat(atts.getValue(0));
+		}else if(name.equals("Text")) {
+			t = atts.getValue(0);
+		}
 	}
 
 
 	public void endElement (String uri, String name, String qName) {
-		if ("".equals (uri))
-			System.out.println("End element: " + qName);
-		else
-			System.out.println("End element:   {" + uri + "}" + name);
+		if(name.equals("PathNode")) {
+			PathNode n = new PathNode();
+			
+			PBounds b = new PBounds();
+			b.add(new Point((int)x,(int)y));
+			b.add(new Point((int)(x+w),(int)(y+h)));
+			n.setPathTo(b);
+			
+			n.setStroke(new BasicStroke(s));
+			p.layer.addChild(n);
+		}else if(name.equals("TextNode")){
+			TextNode n = new TextNode(t);
+			n.setBounds(x, y, w, h);
+			n.scale(s);
+			p.layer.addChild(n);
+		}
 	}
 
 
 	public void characters (char ch[], int start, int length) {
-		System.out.print("Characters:    \"");
-		for (int i = start; i < start + length; i++) {
-			switch (ch[i]) {
-			case '\\':
-				System.out.print("\\\\");
-				break;
-			case '"':
-				System.out.print("\\\"");
-				break;
-			case '\n':
-				System.out.print("\\n");
-				break;
-			case '\r':
-				System.out.print("\\r");
-				break;
-			case '\t':
-				System.out.print("\\t");
-				break;
-			default:
-				System.out.print(ch[i]);
-			break;
-			}
-		}
-		System.out.print("\"\n");
 	}
 
 }

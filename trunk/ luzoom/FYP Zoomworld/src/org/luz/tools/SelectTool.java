@@ -7,7 +7,7 @@ import edu.umd.cs.piccolox.event.PSelectionEventHandler;
 
 public class SelectTool extends Tool {
 
-	PSelectionEventHandler selectionEventHandler;
+	SelectionHandler selectionEventHandler;
 	
 	public SelectTool(ToolBelt data) {
 		super(data);

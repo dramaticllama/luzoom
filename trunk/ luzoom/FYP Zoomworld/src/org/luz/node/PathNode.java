@@ -7,8 +7,11 @@ import java.awt.Stroke;
 import edu.umd.cs.piccolo.nodes.PPath;
 
 @SuppressWarnings("serial")
-public class PathNode extends PPath implements PersistentNode {
+public class PathNode extends PPath implements PersistentNode, GroupableNode {
 
+		private NodeGroup group;
+		
+	
         public PathNode() {
                 super();
         }
@@ -31,6 +34,20 @@ public class PathNode extends PPath implements PersistentNode {
 					"\t<Height h=\"" + getHeight() + "\"></Height>\n" +
 					"\t<Width w=\"" + getWidth() + "\"></Width>\n" +
 					"\t<Scale s=\"" + ((BasicStroke)getStroke()).getLineWidth() + "\"></Scale>";
-		}      
+		}
+		public NodeGroup getNodeGroup() {
+			return group;
+			
+		}
+		@Override
+		public boolean isGrouped() {
+			if(group != null) {
+				return true;
+			}
+			return false;
+		}
+		public void setGroup(NodeGroup g) {
+			group = g;
+		}    
 }
 

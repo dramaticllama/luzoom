@@ -4,9 +4,13 @@ import java.awt.BasicStroke;
 import java.awt.event.InputEvent;
 import java.awt.geom.Point2D;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
+
 import org.luz.node.PathNode;
+import org.luz.node.RectangleNode;
 import org.luz.tools.ToolBelt;
 
+import edu.umd.cs.piccolo.PCamera;
 import edu.umd.cs.piccolo.PLayer;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
@@ -15,7 +19,7 @@ import edu.umd.cs.piccolo.util.PBounds;
 
 public class RectangleDragHandler extends  PBasicInputEventHandler {
 
-	protected PathNode rectangle;
+	protected RectangleNode rectangle;
 	protected Point2D pressPoint;
 	protected Point2D dragPoint;
 
@@ -32,10 +36,14 @@ public class RectangleDragHandler extends  PBasicInputEventHandler {
 		super.mousePressed(e);		
 		pressPoint = e.getPosition();
 		dragPoint = pressPoint; 
-
-		rectangle = new PathNode();
+		System.out.println(e.getPickedNode());
+		rectangle = new RectangleNode();
 		rectangle.setStroke(new BasicStroke((float)(1/ e.getCamera().getViewScale())));
-		layer.addChild(rectangle);
+		if (e.getPickedNode() instanceof PCamera) {
+			layer.addChild(rectangle);
+		}else {
+			e.getPickedNode().addChild(rectangle);
+		}	
 		updateRectangle();
 	}
 	public void mouseDragged(PInputEvent e) {
@@ -46,8 +54,6 @@ public class RectangleDragHandler extends  PBasicInputEventHandler {
 	public void mouseReleased(PInputEvent e) {
 		super.mouseReleased(e);
 		updateRectangle();
-		rectangle.saveNodeStart();
-		rectangle = null;		
 	}	
 	public void updateRectangle() {
 		PBounds b = new PBounds();
