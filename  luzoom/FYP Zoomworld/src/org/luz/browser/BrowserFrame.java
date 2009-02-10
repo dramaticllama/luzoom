@@ -34,7 +34,7 @@ public class BrowserFrame extends JFrame {
 		setTitle("Luz Browser");
 		setLocationRelativeTo(null);	
 		xmlReader = new Reader();
-		xmlHandler = new Handler();
+		xmlHandler = new Handler(panel);
 		fileC = new JFileChooser();
 		
 		addDrawPanel();

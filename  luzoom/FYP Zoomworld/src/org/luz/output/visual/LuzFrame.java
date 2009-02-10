@@ -33,6 +33,7 @@ public class LuzFrame extends JFrame {
 	private JToggleButton changeButton;
 	private JToggleButton textButton;
 	private JToggleButton ellipseButton;
+	private JToggleButton polyLineButton;
 	private JToggleButton lineButton;
 
 	private JMenuBar menuBar;
@@ -69,11 +70,12 @@ public class LuzFrame extends JFrame {
 		addButtons(bar);
 
 		fileC = new JFileChooser("C:\\Documents and Settings\\Owner\\Desktop\\Backup\\Code\\Eclipse Workspace\\FYP Zoomworld");
-	
+		fileC.setFileFilter(new XMLFilter());
+		
 		panel = new LuzPanel();
 		data = new ToolBelt(panel);		
 		data.changeToolBoxState(0);
-		xmlHandler = new Handler();
+		xmlHandler = new Handler(panel);
 		xmlReader =  new Reader();
 		createMenu();
 		this.setJMenuBar(menuBar);
@@ -112,10 +114,15 @@ public class LuzFrame extends JFrame {
 
 		menuBar.add(fileMenu);
 		fileMenu.add(fileNew);
+		fileNew.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				panel.layer.removeAllChildren();
+			}			
+		});
 		fileMenu.add(fileLoad);	
 		fileLoad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(fileC.showSaveDialog(null)== JFileChooser.APPROVE_OPTION){
+				if(fileC.showOpenDialog(null)== JFileChooser.APPROVE_OPTION){
 					xmlReader.startXMLParse(fileC.getSelectedFile(), xmlHandler);
 				}
 			}			
@@ -143,6 +150,11 @@ public class LuzFrame extends JFrame {
 		});
 		fileMenu.addSeparator();
 		fileMenu.add(fileExit);
+		fileExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}			
+		});
 
 		menuBar.add(editMenu);
 		editMenu.add(editCopy);
@@ -166,8 +178,9 @@ public class LuzFrame extends JFrame {
 		ImageIcon textIcon = createImageIcon("textIcon.jpg");
 		ImageIcon panIcon = createImageIcon("panIcon.jpg");
 		ImageIcon ellipseIcon = createImageIcon("ellipseIcon.jpg");
+		ImageIcon polyLineIcon = createImageIcon("polyLineIcon.jpg");
 		ImageIcon lineIcon = createImageIcon("lineIcon.jpg");
-
+		
 		bar.setFloatable(false);
 		bar.setFocusable(false);
 
@@ -176,8 +189,9 @@ public class LuzFrame extends JFrame {
 		squareButton = new JToggleButton(squareIcon);
 		textButton = new JToggleButton(textIcon);
 		ellipseButton = new JToggleButton(ellipseIcon);
-		lineButton = new JToggleButton(lineIcon);	
-
+		polyLineButton = new JToggleButton(polyLineIcon);	
+		lineButton = new JToggleButton(lineIcon);
+		
 		panButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				data.changeToolBoxState(0);				
@@ -203,9 +217,14 @@ public class LuzFrame extends JFrame {
 				data.changeToolBoxState(4);				
 			}			
 		});
-		lineButton.addActionListener(new ActionListener() {
+		polyLineButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				data.changeToolBoxState(5);				
+			}			
+		});
+		lineButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				data.changeToolBoxState(6);				
 			}			
 		});
 
@@ -215,6 +234,7 @@ public class LuzFrame extends JFrame {
 		group.add(changeButton);
 		group.add(textButton);
 		group.add(ellipseButton);
+		group.add(polyLineButton);
 		group.add(lineButton);
 
 		group.setSelected(panButton.getModel(), true);
@@ -224,6 +244,7 @@ public class LuzFrame extends JFrame {
 		bar.add(changeButton);
 		bar.add(textButton);
 		bar.add(ellipseButton);
+		bar.add(polyLineButton);
 		bar.add(lineButton);
 	}
 	private ImageIcon createImageIcon(String filePath){
