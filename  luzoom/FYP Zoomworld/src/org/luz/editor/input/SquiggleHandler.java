@@ -1,10 +1,10 @@
-package org.luz.input;
+package org.luz.editor.input;
 
 import java.awt.BasicStroke;
 import java.awt.geom.Point2D;
 
+import org.luz.editor.nodetools.ToolBelt;
 import org.luz.node.PathNode;
-import org.luz.tools.ToolBelt;
 
 import edu.umd.cs.piccolo.event.PDragSequenceEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;

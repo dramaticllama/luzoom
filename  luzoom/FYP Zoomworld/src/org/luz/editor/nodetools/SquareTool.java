@@ -1,6 +1,6 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
-import org.luz.input.RectangleDragHandler;
+import org.luz.editor.input.RectangleDragHandler;
 
 
 public class SquareTool extends Tool {

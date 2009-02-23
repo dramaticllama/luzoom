@@ -1,6 +1,6 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
-import org.luz.input.EllipseDragHandler;
+import org.luz.editor.input.EllipseDragHandler;
 
 public class EllipseTool extends Tool {
 

@@ -1,6 +1,6 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
-import org.luz.output.visual.LuzPanel;
+import org.luz.editor.output.visual.LuzPanel;
 
 public class ToolBelt {
 

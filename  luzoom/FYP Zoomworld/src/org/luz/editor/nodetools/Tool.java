@@ -1,4 +1,4 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
 public abstract class Tool {
 	

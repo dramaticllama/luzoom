@@ -1,4 +1,4 @@
-package org.luz.output.io;
+package org.luz.editor.output.io;
 
 import java.io.File;
 import java.io.FileWriter;

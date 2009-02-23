@@ -1,6 +1,6 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
-import org.luz.input.LineHandler;
+import org.luz.editor.input.LineHandler;
 
 
 public class LineTool extends Tool {

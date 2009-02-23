@@ -1,6 +1,6 @@
 package org.luz.test;
 
-import org.luz.output.visual.LuzFrame;
+import org.luz.editor.output.visual.LuzFrame;
 
 public class DrawerTest {
 

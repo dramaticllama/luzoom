@@ -1,4 +1,4 @@
-package org.luz.output.visual;
+package org.luz.editor.output.visual;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -16,10 +16,10 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
 import org.luz.browser.BrowserFrame;
-import org.luz.input.Handler;
-import org.luz.input.Reader;
-import org.luz.output.io.LuzIO;
-import org.luz.tools.ToolBelt;
+import org.luz.editor.input.Handler;
+import org.luz.editor.input.Reader;
+import org.luz.editor.nodetools.ToolBelt;
+import org.luz.editor.output.io.LuzIO;
 
 public class LuzFrame extends JFrame {
 

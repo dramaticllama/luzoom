@@ -1,11 +1,11 @@
-package org.luz.input;
+package org.luz.editor.input;
 
 import java.awt.geom.Point2D;
 
 import javax.swing.JOptionPane;
 
+import org.luz.editor.nodetools.ToolBelt;
 import org.luz.node.TextNode;
-import org.luz.tools.ToolBelt;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.util.PBounds;

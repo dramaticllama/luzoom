@@ -1,11 +1,11 @@
-package org.luz.input;
+package org.luz.editor.input;
 import java.awt.BasicStroke;
 import java.awt.Point;
 import java.awt.geom.Point2D;
 
+import org.luz.editor.output.visual.LuzPanel;
 import org.luz.node.PathNode;
 import org.luz.node.TextNode;
-import org.luz.output.visual.LuzPanel;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 

@@ -1,6 +1,6 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
-import org.luz.input.TextHandler;
+import org.luz.editor.input.TextHandler;
 
 public class TextTool extends Tool {
 
