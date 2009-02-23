@@ -1,7 +1,7 @@
-package org.luz.tools;
+package org.luz.editor.nodetools;
 
 
-import org.luz.input.SelectionHandler;
+import org.luz.editor.input.SelectionHandler;
 
 import edu.umd.cs.piccolox.event.PSelectionEventHandler;
 

@@ -1,4 +1,4 @@
-package org.luz.output.visual;
+package org.luz.editor.output.visual;
 
 import java.awt.Color;
 import java.awt.Dimension;

@@ -9,9 +9,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import org.luz.input.Handler;
-import org.luz.input.Reader;
-import org.luz.output.visual.LuzPanel;
+import org.luz.editor.input.Handler;
+import org.luz.editor.input.Reader;
+import org.luz.editor.output.visual.LuzPanel;
 
 @SuppressWarnings("serial")
 public class BrowserFrame extends JFrame {

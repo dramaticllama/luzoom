@@ -1,4 +1,4 @@
-package org.luz.input;
+package org.luz.editor.input;
 
 import java.awt.BasicStroke;
 import java.awt.event.InputEvent;
@@ -6,9 +6,9 @@ import java.awt.geom.Point2D;
 
 import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
 
+import org.luz.editor.nodetools.ToolBelt;
 import org.luz.node.PathNode;
 import org.luz.node.RectangleNode;
-import org.luz.tools.ToolBelt;
 
 import edu.umd.cs.piccolo.PCamera;
 import edu.umd.cs.piccolo.PLayer;

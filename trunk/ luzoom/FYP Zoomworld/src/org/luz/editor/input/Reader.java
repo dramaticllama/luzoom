@@ -1,4 +1,4 @@
-package org.luz.input;
+package org.luz.editor.input;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;

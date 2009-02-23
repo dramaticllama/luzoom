@@ -1,4 +1,4 @@
-package org.luz.output.visual;
+package org.luz.editor.output.visual;
 
 import java.io.File;
 import javax.swing.filechooser.FileFilter;

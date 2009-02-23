@@ -1,15 +1,15 @@
 
-package org.luz.input;
+package org.luz.editor.input;
 
 import java.awt.event.KeyEvent;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.luz.editor.nodetools.ToolBelt;
 import org.luz.node.BoundsHandle;
 import org.luz.node.GroupNode;
 import org.luz.node.GroupableNode;
 import org.luz.node.NodeGroup;
-import org.luz.tools.ToolBelt;
 
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PInputEvent;
