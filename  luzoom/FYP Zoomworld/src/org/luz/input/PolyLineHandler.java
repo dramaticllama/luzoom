@@ -1,19 +1,15 @@
 package org.luz.input;
 
-import java.awt.BasicStroke;
-import java.awt.event.MouseEvent;
-import java.awt.geom.Point2D;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Vector;
-
-import org.luz.node.PathNode;
-import org.luz.tools.ToolBelt;
-
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PDragSequenceEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.nodes.PPath;
+import org.luz.editor.nodetools.ToolBelt;
+
+
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
 
 public class PolyLineHandler extends PDragSequenceEventHandler {
 
