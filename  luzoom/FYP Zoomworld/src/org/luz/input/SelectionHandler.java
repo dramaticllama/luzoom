@@ -1,6 +1,35 @@
 
 package org.luz.input;
 
+import java.awt.event.KeyEvent;
+import java.util.Collection;
+import java.util.Iterator;
+
+import org.luz.node.BoundsHandle;
+import org.luz.node.GroupNode;
+import org.luz.node.GroupableNode;
+import org.luz.node.NodeGroup;
+import org.luz.tools.ToolBelt;
+
+import edu.umd.cs.piccolo.PNode;
+import edu.umd.cs.piccolo.event.PInputEvent;
+import edu.umd.cs.piccolox.event.PNotificationCenter;
+import edu.umd.cs.piccolox.event.PSelectionEventHandler;
+
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Paint;
+import java.awt.Stroke;
+import java.awt.event.KeyEvent;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import edu.umd.cs.piccolo.PCamera;
 import edu.umd.cs.piccolo.PLayer;
 import edu.umd.cs.piccolo.PNode;
@@ -10,17 +39,7 @@ import edu.umd.cs.piccolo.nodes.PPath;
 import edu.umd.cs.piccolo.util.PBounds;
 import edu.umd.cs.piccolo.util.PDimension;
 import edu.umd.cs.piccolo.util.PNodeFilter;
-import edu.umd.cs.piccolox.event.PNotificationCenter;
-import org.luz.editor.nodetools.ToolBelt;
-import org.luz.node.BoundsHandle;
-import org.luz.node.GroupableNode;
-import org.luz.node.NodeGroup;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.geom.Point2D;
-import java.util.*;
-import java.util.List;
+import edu.umd.cs.piccolox.handles.PBoundsHandle;
 
 public class SelectionHandler extends PDragSequenceEventHandler {
 

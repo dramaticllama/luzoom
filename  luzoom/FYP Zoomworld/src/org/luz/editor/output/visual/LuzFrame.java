@@ -173,13 +173,13 @@ public class LuzFrame extends JFrame {
 	}
 	private void addButtons(JToolBar bar) {
 
-		ImageIcon squareIcon = createImageIcon("resources//squareIcon.jpg");
-		ImageIcon selectIcon = createImageIcon("resources//selectIcon.jpg");
-		ImageIcon textIcon = createImageIcon("resources//textIcon.jpg");
-		ImageIcon panIcon = createImageIcon("resources//panIcon.jpg");
-		ImageIcon ellipseIcon = createImageIcon("resources//ellipseIcon.jpg");
-		ImageIcon polyLineIcon = createImageIcon("resources//polyLineIcon.jpg");
-		ImageIcon lineIcon = createImageIcon("resources//lineIcon.jpg");
+		ImageIcon squareIcon = createImageIcon("squareIcon.jpg");
+		ImageIcon selectIcon = createImageIcon("selectIcon.jpg");
+		ImageIcon textIcon = createImageIcon("textIcon.jpg");
+		ImageIcon panIcon = createImageIcon("panIcon.jpg");
+		ImageIcon ellipseIcon = createImageIcon("ellipseIcon.jpg");
+		ImageIcon polyLineIcon = createImageIcon("polyLineIcon.jpg");
+		ImageIcon lineIcon = createImageIcon("lineIcon.jpg");
 		
 		bar.setFloatable(false);
 		bar.setFocusable(false);

@@ -10,10 +10,7 @@ public class EllipseTool extends Tool {
 		super(data);
 		drag = new EllipseDragHandler(data);
 	}
-
-
-
-    public void toolActive() {
+	public void toolActive() {
 		data.getPaintPanel().addInputEventListener(drag);		
 	}
 	public void toolSwap() {

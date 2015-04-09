@@ -1,18 +1,25 @@
 package org.luz.output.visual;
 
-import org.luz.browser.BrowserFrame;
-import org.luz.editor.input.Handler;
-import org.luz.editor.input.Reader;
-import org.luz.editor.nodetools.ToolBelt;
-import org.luz.editor.output.io.LuzIO;
-import org.luz.editor.output.visual.LuzPanel;
-import org.luz.editor.output.visual.XMLFilter;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
+
+import org.luz.browser.BrowserFrame;
+import org.luz.input.Handler;
+import org.luz.input.Reader;
+import org.luz.output.io.LuzIO;
+import org.luz.tools.ToolBelt;
 
 public class LuzFrame extends JFrame {
 
